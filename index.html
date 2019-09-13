@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <img src="img/logo.svg" width="164" height="54" alt="Глейси">
+      <img src="img/logo.svg" width="164" height="54" alt="Логотип магазина Глейси">
       <nav>
         <ul>
           <li><a href="catalog.html">Каталог</a>
@@ -32,7 +32,7 @@
       </nav>
     </header>
     <main>
-      <h1>Магазин мороженого Глейси</h1>
+      <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
 
       <div class="">
         <p>
@@ -142,7 +142,7 @@
       </section>
 
       <section>
-        <h2>Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
             производства на развес</p>
         <ul>
@@ -169,18 +169,22 @@
       </article>
 
       <section>
-        <h2>Подписка на новости</h2>
+        <h2 class="visually-hidden">Подписка на новости</h2>
         <p>
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
           самого вкусного, что у нас происходит. Обещаем не спамить и не слать
           всякой ненужной ерунды. Честно =)
         </p>
-          <!-- Здесь будет форма с отправкой своего email-->
+        <form class="" method="post">
+          <label for="user-email" class="visually-hidden">Ваш емайл</label>
+          <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+          <button type="submit">Отправить</button>
+        </form>
       </section>
 
       <section>
         <h2>Наш адрес</h2>
-        <img src="img/map.png" width="1250" height="430" alt="Адрес магазина на карте">
+        <img src="img/map.png" width="1250" height="430" alt="Магазин Глейси по ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="">
           <p>Адрес главного офиса
             и офлайн-магазина:
@@ -218,5 +222,54 @@
        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
      </p>
     </footer>
+
+    <section>
+      <h2 class="visually-hidden">Что ищем?</h2>
+      <form class="" method="get">
+        <label for="search-product" class="visually-hidden">Товар для поиска</label>
+        <input id="search-product" type="search" name="search-product" placeholder="Крем-брюле">
+        <button type="submit" name="button" class="visually-hidden">Искать</button>
+      </form>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Личный кабинет</h2>
+      <form class="" method="post">
+        <p>
+          <label for="user-login" class="visually-hidden">Логин</label>
+          <input id="user-login" type="text" name="user-login" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-password" class="visually-hidden">Пароль</label>
+          <input id="user-password" type="password" name="user-password" placeholder="••••••••">
+        </p>
+        <p>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+        </p>
+        <button type="submit">Войти</button>
+      </form>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <p>Мы обязательно вам ответим!</p>
+      <form class="" method="post">
+        <p>
+          <label for="user-name" class="visually-hidden">Ваше имя и фамилия</label>
+          <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email" class="visually-hidden">Ваш емайл</label>
+          <input id="email" type="email" name="user-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="comment" class="visually-hidden">Оставьте свой комментарий</label>
+          <textarea id="comment" name="comment" rows="8" cols="40">В свободной форме</textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
