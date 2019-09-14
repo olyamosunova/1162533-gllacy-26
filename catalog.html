@@ -25,9 +25,64 @@
         </ul>
 
         <ul>
-          <li><a href="#">Поиск</a></li>
-          <li><a href="#">Вход</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li>
+            <a href="#"><span class="visually-hidden">Поиск</span></a>
+            <div class="field-search">
+              <h2 class="visually-hidden">Что ищем?</h2>
+              <form class="" action="https://echo.htmlacademy.ru" method="get">
+                <label for="search-product" class="visually-hidden">Товар для поиска</label>
+                <input id="search-product" type="search" name="search-product" placeholder="Крем-брюле">
+                <button type="submit" name="button" class="visually-hidden">Искать</button>
+              </form>
+            </div>
+          </li>
+          <li>
+            <a href="#">Вход</a>
+            <div class="private-office">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form class="" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label for="user-login" class="visually-hidden">Логин</label>
+                  <input id="user-login" type="text" name="user-login" placeholder="email@example.com">
+                </p>
+                <p>
+                  <label for="user-password" class="visually-hidden">Пароль</label>
+                  <input id="user-password" type="password" name="user-password" placeholder="••••••••">
+                </p>
+                <p>
+                  <a href="">Забыли пароль?</a>
+                  <a href="">Новая регистрация</a>
+                </p>
+                <button type="submit">Войти</button>
+              </form>
+            </div>
+          </li>
+          <li>
+            <a href="#">2 товара</a>
+            <div class="basket">
+              <h2 class="visually-hidden">Корзина</h2>
+              <table>
+                <tr>
+                  <td><button type="button" name="delete-product"><span class="visually-hidden">Удалить</span></button></td>
+                  <td><img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                  <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                  <td>1,5 кг × 200 руб.</td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><button type="button" name="delete-product"><span class="visually-hidden">Удалить</span></button></td>
+                  <td><img src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                  <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                  <td>1,5 кг × 300 руб.</td>
+                  <td>450 руб.</td>
+                </tr>
+                <tr>
+                  <td colspan="5">Итого: 750 руб.</td>
+                </tr>
+              </table>
+              <a href="">Оформить заказ</a>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -192,7 +247,7 @@
       </section>
 
       <ul>
-        <li>Назад</li>
+        <li><a href="">Назад</a></li>
         <li>1</li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
@@ -204,10 +259,10 @@
     <footer>
      <div class="">
        <ul>
-         <li><a href="#">Твитер</a></li>
-         <li><a href="#">Инстаграм</a></li>
-         <li><a href="#">Фейсбук</a></li>
-         <li><a href="#">Вконтакте</a></li>
+         <li><a href="#"><span class="visually-hidden">Твитер</span></a></li>
+         <li><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+         <li><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+         <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
        </ul>
      </div>
 
@@ -225,54 +280,5 @@
        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
      </p>
     </footer>
-    <section>
-      <h2 class="visually-hidden">Что ищем?</h2>
-      <form class="" method="get">
-        <label for="search-product" class="visually-hidden">Товар для поиска</label>
-        <input id="search-product" type="search" name="search-product" placeholder="Крем-брюле">
-        <button type="submit" name="button" class="visually-hidden">Искать</button>
-      </form>
-    </section>
-
-    <section>
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <form class="" method="post">
-        <p>
-          <label for="user-login" class="visually-hidden">Логин</label>
-          <input id="user-login" type="text" name="user-login" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="user-password" class="visually-hidden">Пароль</label>
-          <input id="user-password" type="password" name="user-password" placeholder="••••••••">
-        </p>
-        <p>
-          <a href="">Забыли пароль?</a>
-          <a href="">Новая регистрация</a>
-        </p>
-        <button type="submit">Войти</button>
-      </form>
-    </section>
-
-    <section>
-      <h2 class="visually-hidden">Корзина</h2>
-      <table>
-        <tr>
-          <td>Пломбир с апельсиновым джемом</td>
-          <td>1,5 кг × 200 руб.</td>
-          <td>300 руб.</td>
-        </tr>
-        <tr>
-          <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td>1,5 кг × 300 руб.</td>
-          <td>450 руб.</td>
-        </tr>
-        <tr>
-          <td colspan="3">Итого: 750 руб.</td>
-        </tr>
-      </table>
-      <a href="">Оформить заказ</a>
-    </section>
-
-
   </body>
 </html>

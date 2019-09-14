@@ -25,9 +25,39 @@
         </ul>
 
         <ul>
-          <li><a href="#">Поиск</a></li>
-          <li><a href="#">Вход</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li>
+            <a href="#"><span class="visually-hidden">Поиск</span></a>
+            <div class="field-search">
+              <h2 class="visually-hidden">Что ищем?</h2>
+              <form class="" action="https://echo.htmlacademy.ru" method="get">
+                <label for="search-product" class="visually-hidden">Товар для поиска</label>
+                <input id="search-product" type="search" name="search-product" placeholder="Крем-брюле">
+                <button type="submit" name="button" class="visually-hidden">Искать</button>
+              </form>
+            </div>
+          </li>
+          <li>
+            <a href="#">Вход</a>
+            <div class="private-office">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form class="" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label for="user-login" class="visually-hidden">Логин</label>
+                  <input id="user-login" type="text" name="user-login" placeholder="email@example.com">
+                </p>
+                <p>
+                  <label for="user-password" class="visually-hidden">Пароль</label>
+                  <input id="user-password" type="password" name="user-password" placeholder="••••••••">
+                </p>
+                <p>
+                  <a href="">Забыли пароль?</a>
+                  <a href="">Новая регистрация</a>
+                </p>
+                <button type="submit">Войти</button>
+              </form>
+            </div>
+          </li>
+          <li><a href="#">Пусто</a></li>
         </ul>
       </nav>
     </header>
@@ -89,12 +119,12 @@
         <ul>
           <li>
             <span>Хит</span>
-            <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
-            <p>
-              <b>310 р</b>
-              <span>/кг</span>
-            </p>
             <a href="#">
+              <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
+              <p>
+                <b>310 р</b>
+                <span>/кг</span>
+              </p>
               <h3>Сливочное с апельсиновым джемом
                   и цитрусовой стружкой</h3>
             </a>
@@ -102,25 +132,25 @@
 
           <li>
             <span>Хит</span>
-            <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <p>
-              <b>380 р</b>
-              <span>/кг</span>
-            </p>
             <a href="#">
+              <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <p>
+                <b>380 р</b>
+                <span>/кг</span>
+              </p>
               <h3>Сливочно-кофейное с кусочками
-               шоколада</h3>
+                  шоколада</h3>
             </a>
           </li>
 
           <li>
             <span>Хит</span>
-            <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p>
-              <b>355 р</b>
-              <span>/кг</span>
-            </p>
             <a href="#">
+              <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <p>
+                <b>355 р</b>
+                <span>/кг</span>
+              </p>
               <h3>Сливочно-клубничное с присыпкой
                   из белого шоколада</h3>
             </a>
@@ -128,12 +158,12 @@
 
           <li>
             <span>Хит</span>
-            <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <p>
-              <b>415 р</b>
-              <span>/кг</span>
-            </p>
             <a href="#">
+              <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              <p>
+                <b>415 р</b>
+                <span>/кг</span>
+              </p>
               <h3>Сливочное крем-брюле с
                   карамельной подливкой</h3>
             </a>
@@ -175,7 +205,7 @@
           самого вкусного, что у нас происходит. Обещаем не спамить и не слать
           всякой ненужной ерунды. Честно =)
         </p>
-        <form class="" method="post">
+        <form class="" action="https://echo.htmlacademy.ru" method="post">
           <label for="user-email" class="visually-hidden">Ваш емайл</label>
           <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
           <button type="submit">Отправить</button>
@@ -201,10 +231,10 @@
     <footer>
      <div class="">
        <ul>
-         <li><a href="#">Твитер</a></li>
-         <li><a href="#">Инстаграм</a></li>
-         <li><a href="#">Фейсбук</a></li>
-         <li><a href="#">Вконтакте</a></li>
+         <li><a href="#"><span class="visually-hidden">Твитер</span></a></li>
+         <li><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+         <li><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+         <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
        </ul>
      </div>
 
@@ -223,38 +253,10 @@
      </p>
     </footer>
 
-    <section>
-      <h2 class="visually-hidden">Что ищем?</h2>
-      <form class="" method="get">
-        <label for="search-product" class="visually-hidden">Товар для поиска</label>
-        <input id="search-product" type="search" name="search-product" placeholder="Крем-брюле">
-        <button type="submit" name="button" class="visually-hidden">Искать</button>
-      </form>
-    </section>
-
-    <section>
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <form class="" method="post">
-        <p>
-          <label for="user-login" class="visually-hidden">Логин</label>
-          <input id="user-login" type="text" name="user-login" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="user-password" class="visually-hidden">Пароль</label>
-          <input id="user-password" type="password" name="user-password" placeholder="••••••••">
-        </p>
-        <p>
-          <a href="">Забыли пароль?</a>
-          <a href="">Новая регистрация</a>
-        </p>
-        <button type="submit">Войти</button>
-      </form>
-    </section>
-
-    <section>
+    <div class="feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <p>Мы обязательно вам ответим!</p>
-      <form class="" method="post">
+      <form class="" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-name" class="visually-hidden">Ваше имя и фамилия</label>
           <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
@@ -265,11 +267,11 @@
         </p>
         <p>
           <label for="comment" class="visually-hidden">Оставьте свой комментарий</label>
-          <textarea id="comment" name="comment" rows="8" cols="40">В свободной форме</textarea>
+          <textarea id="comment" name="comment" rows="8" cols="40" placeholder="В свободной форме"></textarea>
         </p>
         <button type="submit">Отправить</button>
       </form>
       <button type="button">Закрыть</button>
-    </section>
+    </div>
   </body>
 </html>
