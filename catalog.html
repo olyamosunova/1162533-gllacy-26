@@ -101,17 +101,24 @@
         <p>
           <label for="sort">Сортировка:</label>
           <select id="sort" class="sort" name="sort">
-            <option>по популярности</option>
-            <option>сначала недорогие</option>
-            <option>сначала дорогие</option>
-            <option>по жирности</option>
+            <option value="populary">по популярности</option>
+            <option value="inexpensive">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="flat">по жирности</option>
           </select>
         </p>
 
+        <!-- Нашла такую конструкцию в интернете
+            https://jqueryui.com/slider/#range -->
         <p>
-          <label for="price">Цена: 100 руб. - 500 руб.</label>
-          <input id="price" type="range" min="100" max="500" step="50" name="price">
+          <label for="price">Цена:</label>
+          <input id="price" type="text" readonly value="100 руб. - 500 руб.">
         </p>
+        <div class="slider-range">
+          <div class=""></div>
+          <button type="button" name="price-from"><span class="visually-hidden">Цена от</span></button>
+          <button type="button" name="price-to"><span class="visually-hidden">Цена до</span></button>
+        </div>
 
         <p>
           Жирность:
