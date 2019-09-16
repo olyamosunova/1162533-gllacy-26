@@ -57,28 +57,28 @@
           </li>
           <li>
             <a href="#">2 товара</a>
-            <div class="basket">
+            <form class="basket" action="https://echo.htmlacademy.ru" method="post">
               <table>
                 <tr>
                   <td><button type="button" name="delete-product"><span class="visually-hidden">Удалить</span></button></td>
-                  <td><img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                  <td><a href="#">Пломбир с апельсиновым джемом</a></td>
-                  <td>1,5 кг × 200 руб.</td>
-                  <td>300 руб.</td>
+                  <td><input type="hidden"><img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                  <td><input type="hidden"><a href="#">Пломбир с апельсиновым джемом</a></td>
+                  <td><input type="hidden">1,5 кг × 200 руб.</td>
+                  <td><input type="hidden">300 руб.</td>
                 </tr>
                 <tr>
                   <td><button type="button" name="delete-product"><span class="visually-hidden">Удалить</span></button></td>
-                  <td><img src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                  <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                  <td>1,5 кг × 300 руб.</td>
-                  <td>450 руб.</td>
+                  <td><input type="hidden"><img src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                  <td><input type="hidden"><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                  <td><input type="hidden">1,5 кг × 300 руб.</td>
+                  <td><input type="hidden">450 руб.</td>
                 </tr>
                 <tr>
-                  <td colspan="5">Итого: 750 руб.</td>
+                  <td colspan="5"><input type="hidden">Итого: 750 руб.</td>
                 </tr>
               </table>
-              <a href="">Оформить заказ</a>
-            </div>
+              <button type="submit" name="order-ok">Оформить заказ</button>
+            </form>
           </li>
         </ul>
       </nav>
@@ -108,11 +108,21 @@
           </select>
         </p>
 
-        <!-- Нашла такую конструкцию в интернете
-            https://jqueryui.com/slider/#range -->
         <p>
-          <label for="price">Цена:</label>
-          <input id="price" type="text" readonly value="100 руб. - 500 руб.">
+          Цена:
+          <label for="price-for">
+            <span class="visually-hidden">Цена от</span>
+            <input id="price-for" name="price-for" type="number" value="100">
+            руб. -
+          </label>
+          <label for="price-to">
+            <span class="visually-hidden">Цена до</span>
+            <input id="price-to" name="price-to" type="number" value="500">
+            руб.
+          </label>
+
+          <!-- Нашла такую конструкцию в интернете
+              https://jqueryui.com/slider/#range -->
         </p>
         <div class="slider-range">
           <div class=""></div>
