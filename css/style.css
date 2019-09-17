@@ -1,3 +1,284 @@
 body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+
   background-color: #849d8f;
+}
+
+.user-navigation div,
+.feedback,
+.main-catalog,
+.basket-form {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner-page {
+  background-color: #9cb0a5;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #e84d37;
+  background-image: linear-gradient(to top, #e74b36, #f26843);
+  border-radius: 20px;
+  box-shadow: inset 0 -2px 0 0 #ac1000;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f38367;
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
+}
+
+.button:active {
+  background-color: #e05f3d;
+  background-image: linear-gradient(to top, #e1613e, #d84732);
+  box-shadow: inset 0 2px 0 0 #ac1000;
+}
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: transparent;
+}
+
+.site-navigation a {
+  text-decoration: underline;
+}
+
+.user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #ffffff;
+}
+
+.catalog-nav a:hover,
+.catalog-nav a:focus {
+  width: 87px;
+  height: 32px;
+
+  color: #000;
+
+  border-radius: 30px;
+  background-color: #fff;
+
+  text-decoration: none;
+}
+
+.catalog-nav a:active {
+  box-shadow: inset 0 2px 1px 0 #696969;
+  background-color: #ededed;
+
+  text-decoration: none;
+}
+
+.search,
+.login,
+.backet-button {
+  background-color: #a1b4a9;
+}
+
+.inner-page .search,
+.inner-page .login {
+  background-color: #b0c0b7;
+}
+
+.inner-page .backet-button {
+  color: #000;
+  background-color: #fff;
+}
+
+.search:hover,
+.login:hover,
+.backet-button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.container h1 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.features {
+  color: #323232;
+  background-color: #ebdec8;
+  background-image: url("../img/bg-features.jpg");
+  border-radius: 20px;
+}
+
+.features p {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.feature-item {
+  list-style: none;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.news {
+  width: 560px;
+  height: 220px;
+  background-color: #fff;
+  background-image: url("../img/bg-strawberry.jpg");
+  border-radius: 20px;
+}
+
+.news h2 {
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.news b {
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.subscription {
+  width: 560px;
+  height: 220px;
+
+  color: #656464;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  background-color: #f8f7f4;
+  background-image: url("../img//bg-mail.png");
+  border-radius: 20px;
+}
+
+.main-footer  {
+  color: #fff;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.main-footer a {
+  color: #fff;
+}
+
+.main-footer a:hover,
+.main-footer a:focus,
+.main-footer a:active {
+  color: #ffbc9e;
+}
+
+
+.main-footer ul {
+  list-style: none;
+}
+
+.footer-information a {
+  text-decoration: underline;
+}
+
+
+.footer-copyright {
+  font-size: 12px;
+}
+
+.footer-copyright a:last-child {
+  text-decoration: underline;
+}
+
+.form-subscription input {
+  color: #999999;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.contacts p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.contacts a {
+  color: inherit;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: inherit;
+  list-style: none;
+}
+
+.catalog a {
+  color: #fff;
+}
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  background-color: rgba(155,175,163, 0.5);
+  box-shadow: -1px 1px 5px 0 #7f978a;
+}
+
+.catalog-item-image img {
+  border-radius: 50%;
+}
+
+.catalog-item-price {
+  font-size: 45px;
+  line-height: 1;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item-price span {
+  font-size: 35px;
+}
+
+.catalog-item h3 {
+  font-size: 16px;
+  line-height: 33px;
+  font-weight: 400;
+  text-decoration: underline;
 }
