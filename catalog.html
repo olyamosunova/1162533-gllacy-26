@@ -103,18 +103,19 @@
       <h2 class="visually-hidden">Фильтр</h2>
 
       <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-
-        <p class="filter-option">
+        <p>
           <label for="sort">Сортировка:</label>
-          <select id="sort" class="sort" name="sort">
-            <option value="populary">по популярности</option>
-            <option value="inexpensive">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="flat">по жирности</option>
-          </select>
+          <p>
+            <select id="sort" class="sort" name="sort">
+              <option value="populary">по популярности</option>
+              <option value="inexpensive">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="flat">по жирности</option>
+            </select>
+          </p>
         </p>
 
-        <p class="filter-option">
+        <p>
           Цена:
           <label for="price-for">
             <span class="visually-hidden">Цена от</span>
@@ -137,50 +138,39 @@
           <button type="button" name="price-to"><span class="visually-hidden">Цена до</span></button>
         </div>
 
-        <p class="filter-option">
-          Жирность:
-          <label>
-            <input class="filter-input-radio" type="radio" name="fat" value="0">
-            0%
-          </label>
-          <label>
-            <input class="filter-input-radio" type="radio" name="fat" value="less-10" checked>
-            до 10%
-          </label>
-          <label>
-            <input class="filter-input-radio" type="radio" name="fat" value="less-30">
-            до 30%
-          </label>
-          <label>
-            <input class="filter-input-radio" type="radio" name="fat" value="more-30">
-            выше 30%
-          </label>
-        </p>
+        <fieldset class="filter-option">
+          <legend>Жирность:</legend>
+          <input id="r-1" class="filter-input-radio" type="radio" name="fat" value="0">
+          <label for="r-1" class="label-radio">0%</label>
 
-        <p class="filter-option">
-          Наполнители:
-          <label>
-            <input class="filter-input-checkbox" type="checkbox" name="choco" value="choco" checked>
-            шоколадные
-          </label>
-          <label>
-            <input class="filter-input-checkbox" type="checkbox" name="sugar" value="sugar" checked>
-            сахарные присыпки
-          </label>
-          <label>
-            <input class="filter-input-checkbox" type="checkbox" name="fruits" value="fruits">
-            фрукты
-          </label>
-          <label>
-            <input class="filter-input-checkbox" type="checkbox" name="syrop" value="syrop">
-            сиропы
-          </label>
-          <label>
-            <input class="filter-input-checkbox" type="checkbox" name="jam" value="jam">
-            джемы
-          </label>
-        </p>
-        <button type="submit" name="apply">Применить</button>
+          <input id="r-2" class="filter-input-radio" type="radio" name="fat" value="less-10" checked>
+          <label for="r-2">до 10%</label>
+
+          <input id="r-3" class="filter-input-radio" type="radio" name="fat" value="less-30">
+          <label for="r-3">до 30%</label>
+
+          <input id="r-4" class="filter-input-radio" type="radio" name="fat" value="more 30">
+          <label for="r-4">выше 30%</label>
+        </fieldset>
+
+        <fieldset class="filter-option">
+          <legend>Наполнители:</legend>
+          <input id="ch-1" class="filter-input-checkbox" type="checkbox" name="choco" value="choco" checked>
+          <label for="ch-1">шоколадные</label>
+
+          <input id="ch-2" class="filter-input-checkbox" type="checkbox" name="sugar" value="sugar" checked>
+          <label for="ch-2">сахарные присыпки</label>
+
+          <input id="ch-3" class="filter-input-checkbox" type="checkbox" name="fruits" value="fruits">
+          <label for="ch-3">фрукты</label>
+
+          <input id="ch-4" class="filter-input-checkbox" type="checkbox" name="syrop" value="syrop">
+          <label for="ch-4">сиропы</label>
+
+          <input id="ch-5" class="filter-input-checkbox" type="checkbox" name="jam" value="jam">
+          <label for="ch-5">джемы</label>
+        </fieldset>
+        <button class="button-apply" type="submit" name="apply">Применить</button>
       </form>
 
       <section class="catalog">
@@ -353,13 +343,13 @@
       </section>
 
       <ul class="pagination-list">
-        <li class="pagination-item"><a href="">Назад</a></li>
-        <li class="pagination-item pagination-item-current">1</li>
+        <li class="pagination-item"><a href=""><span class="visually-hidden">Назад</span></a></li>
+        <li class="pagination-item pagination-item-current"><span>1</span></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
-        <li class="pagination-item"><a href="#">Дальше</a></li>
+        <li class="pagination-item"><a href="#"><span class="visually-hidden">Дальше</span></a></li>
       </ul>
     </main>
 
