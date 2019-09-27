@@ -56,7 +56,7 @@
               </form>
             </div>
           </li>
-          <li><a class="backet-button" href="#">Пусто</a></li>
+          <li><a class="basket" href="#">Пусто</a></li>
         </ul>
       </nav>
     </header>
@@ -74,9 +74,9 @@
 
       <div class="slider">
         <ul class="slider-button">
-          <li><button type="button">Слайд 1</button></li>
-          <li><button type="button">Слайд 2</button></li>
-          <li><button type="button">Слайд 3</button></li>
+          <li><button type="button"><span class="visually-hidden">Слайд 1</span></button></li>
+          <li><button type="button"><span class="visually-hidden">Слайд 1</span></button></li>
+          <li><button type="button"><span class="visually-hidden">Слайд 1</span></button></li>
         </ul>
 
         <ul class="slider-picture">
@@ -112,13 +112,15 @@
         </article>
       </section>
 
-      <section class="hits">
+      <section class="catalog">
         <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul class="hits-list">
-          <li class="hits-item">
+        <ul class="catalog-list">
+          <li class="catalog-item">
             <span class="icon-hit"><span class="visually-hidden">Хит</span></span>
-            <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
-            <p class="hit-price">
+            <p class="catalog-item-image">
+              <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
+            </p>
+            <p class="catalog-item-price">
               <b>310&#8381;<span>/кг</span></b>
             </p>
             <a href="#">
@@ -127,10 +129,12 @@
             </a>
           </li>
 
-          <li class="hits-item">
+          <li class="catalog-item">
             <span class="icon-hit"><span class="visually-hidden">Хит</span></span>
-            <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <p class="hit-price">
+            <p class="catalog-item-image">
+              <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            </p>
+            <p class="catalog-item-price">
               <b>380&#8381;<span>/кг</span></b>
             </p>
             <a href="#">
@@ -139,10 +143,12 @@
             </a>
           </li>
 
-          <li class="hits-item">
+          <li class="catalog-item">
             <span class="icon-hit"><span class="visually-hidden">Хит</span></span>
-            <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p class="hit-price">
+            <p class="catalog-item-image">
+              <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            </p>
+            <p class="catalog-item-price">
               <b>355&#8381;<span>/кг</span></b>
             </p>
             <a href="#">
@@ -151,10 +157,12 @@
             </a>
           </li>
 
-          <li class="hits-item">
+          <li class="catalog-item">
             <span class="icon-hit"><span class="visually-hidden">Хит</span></span>
-            <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <p class="hit-price">
+            <p class="catalog-item-image">
+              <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+            </p>
+            <p class="catalog-item-price">
               <b>415&#8381;<span>/кг</span></b>
             </p>
             <a href="#">
@@ -233,19 +241,19 @@
         </ul>
       </div>
 
-     <div class="footer-information">
-       <ul>
-         <li><a href="#">Для поставщиков</a></li>
-         <li><a href="#">О производстве</a></li>
-         <li><a href="#">Наши документы</a></li>
-         <li><a href="#">Экологические стандарты</a></li>
-       </ul>
-     </div>
+      <div class="footer-information">
+        <ul>
+          <li><a href="#">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
+        </ul>
+      </div>
 
-     <p class="footer-copyright">
-       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="logo-htmlacademy"></a>
-       Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
-     </p>
+      <p class="footer-copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="logo-htmlacademy"></a>
+        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
+      </p>
     </footer>
 
     <div class="feedback">
