@@ -9,8 +9,8 @@
   </head>
   <body>
     <header class="main-header">
-      <img src="img/logo.svg" width="164" height="54" alt="Логотип магазина Глейси">
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
+        <p class="main-header-logo"><img src="img/logo.svg" width="164" height="54" alt="Логотип магазина Глейси"></p>
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
             <ul class="main-catalog">
@@ -24,7 +24,6 @@
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О Компании</a></li>
         </ul>
-
         <ul class="user-navigation">
           <li>
             <a class="search" href="#"><span class="visually-hidden">Поиск</span></a>
@@ -179,44 +178,46 @@
             производства на развес</p>
         <ul class="features-list">
           <li class="feature-item">Все наше мороженое изготавливается на собственном
-             производстве, с использованием современного оборудования и
-             проверенных временем технологий.</li>
-          <li class="feature-item">Для приготовления мороженого используются настоящие сливки и
-            молоко высочайшего качества. Все дополнительные ингредиенты и
-            добавки произведены из натурального, экологически чистого сырья.</li>
+            производстве, с использованием современного оборудования и
+            проверенных временем технологий.</li>
           <li class="feature-item">Закупка ингредиентов  производится только у проверенных
             фермерских хозяйств и компаний, с которыми нас связывает
             долговременное сотрудничество.</li>
+          <li class="feature-item">Для приготовления мороженого используются настоящие сливки и
+            молоко высочайшего качества. Все дополнительные ингредиенты и
+            добавки произведены из натурального, экологически чистого сырья.</li>
           <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в
             специальном термопаке, который не дает мороженому растаять в
             пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
 
-      <article class="news">
-        <h2>Новое в нашем блоге</h2>
-        <a href="#"><b>10 способов сервировки <br>
-          фруктовых щербетов к
-          столу</b></a>
-      </article>
+      <div class="index-columns">
+        <article class="news">
+          <h2>Новое в нашем блоге</h2>
+          <a href="#"><b>10 способов сервировки
+            фруктовых щербетов к
+            столу</b></a>
+        </article>
 
-      <section class="subscription">
-        <h2 class="visually-hidden">Подписка на новости</h2>
-        <p>
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
-          самого вкусного, что у нас происходит. Обещаем не спамить и не слать
-          всякой ненужной ерунды. Честно =)
-        </p>
-        <form class="form-subscription" action="https://echo.htmlacademy.ru" method="post">
-          <label for="user-email" class="visually-hidden">Ваш емайл</label>
-          <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
-          <button class="button" type="submit">Отправить</button>
-        </form>
-      </section>
+        <section class="subscription">
+          <h2 class="visually-hidden">Подписка на новости</h2>
+          <p>
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
+            самого вкусного, что у нас происходит. Обещаем не спамить и не слать
+            всякой ненужной ерунды. Честно =)
+          </p>
+          <form class="form-subscription" action="https://echo.htmlacademy.ru" method="post">
+            <label for="user-email" class="visually-hidden">Ваш емайл</label>
+            <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
 
       <section class="contacts-info">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <img src="img/map.png" width="1250" height="430" alt="Магазин Глейси по ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <img src="img/map.png" width="1200" height="430" alt="Магазин Глейси по ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="company-address">
           <p>Адрес главного офиса
              и офлайн-магазина:
@@ -232,28 +233,26 @@
     </main>
 
     <footer class="main-footer">
-      <div class="footer-social">
-        <ul>
+      <div class="container">
+        <ul class="footer-social">
           <li><a class="social-button" href="#"><span class="visually-hidden">Твитер</span></a></li>
           <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
           <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
         </ul>
-      </div>
 
-      <div class="footer-information">
-        <ul>
+        <ul class="footer-information">
           <li><a href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Наши документы</a></li>
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
-      </div>
 
-      <p class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="logo-htmlacademy"></a>
-        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
-      </p>
+        <div class="footer-copyright">
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="logo-htmlacademy"></a>
+          <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
+        </div>
+      </div>
     </footer>
 
     <div class="feedback">
