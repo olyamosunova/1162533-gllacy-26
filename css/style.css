@@ -23,7 +23,11 @@ a {
 }
 
 .visually-hidden {
-  visibility: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .inner-page {
@@ -31,6 +35,11 @@ a {
 }
 
 .button {
+  padding-left: 20px;
+  padding-top: 11px;
+  padding-right: 20px;
+  padding-bottom: 11px;
+
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -38,7 +47,7 @@ a {
   font-weight: 700;
   background-color: #e84d37;
   background-image: linear-gradient(to top, #e74b36, #f26843);
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: inset 0 -2px 0 0 #ac1000;
   border: none;
 }
@@ -106,6 +115,9 @@ a {
 }
 
 .search {
+  display: block;
+  width: 17px;
+  height: 17px;
   background-image: url("../img/loupe.svg");
   background-repeat: no-repeat;
 }
@@ -149,6 +161,8 @@ a {
 
 .container h1 {
   margin: 0;
+  margin-top: 10px;
+  margin-bottom: 27px;
   margin-left: 27px;
 
   font-size: 35px;
@@ -198,8 +212,8 @@ a {
 
 .features p {
   margin: 0;
-  margin-top: 12px;
   margin-left: 21px;
+  padding-top: 30px;
 
   font-size: 24px;
   line-height: 30px;
@@ -215,21 +229,16 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  padding-bottom: 25px;
 }
 
 .features-list li {
   width: 482px;
-  margin-top: 30px;
+  margin-top: 20px;
 
   background-position: left top;
   background-repeat: no-repeat;
 }
-
-
-.features-list li:nth-child(2n) {
-
-}
-
 
 .feature-item {
   list-style: none;
@@ -265,6 +274,11 @@ a {
 }
 
 .news h2 {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
   color: #323232;
   font-size: 16px;
   line-height: 22px;
@@ -272,16 +286,23 @@ a {
 }
 
 .news a {
+  display: block;
+  width: 281px;
+  padding-left: 20px;
+
   color: #323232;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  border-bottom: 2px solid #b2b2b2;
 }
 
-.news a:hover,
-.news a:focus,
-.news a:active,
+.news b {
+  border-bottom: 2px solid #323232;
+}
+
+.news a:hover b,
+.news a:focus b,
+.news a:active b,
 .company-address p a:hover,
 .company-address p a:focus,
 .company-address p a:active {
@@ -301,6 +322,15 @@ a {
   background-color: #f8f7f4;
   background-image: url("../img//bg-mail.png");
   border-radius: 20px;
+}
+
+.subscription p {
+  margin: 0;
+  padding-top: 37px;
+  padding-right: 27px;
+  padding-bottom: 38px;
+  padding-left: 27px;
+
 }
 
 .contacts-info h2 {
@@ -464,10 +494,19 @@ a {
 }
 
 .form-subscription input {
+  width: 341px;
+  margin-left: 27px;
+  margin-right: 10px;
+  padding: 13px;
+  padding-right: auto;
+
   color: #999999;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 
@@ -525,7 +564,7 @@ a {
 }
 
 .contacts {
-  width: 166px;
+  width: 170px;
   margin-right: 27px;
   margin-left: auto;
 }
@@ -546,7 +585,6 @@ a {
 .breadcrumbs {
   display: flex;
   margin: 0;
-  margin-bottom: 10px;
   margin-left: 27px;
   padding: 0;
 
@@ -569,15 +607,25 @@ a {
 
 .filters-form,
 .filters-form input {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
 .filters-form select {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+}
+
+.filters-form fieldset:first-of-type {
+  width: 420px;
+}
+
+.filters-form fieldset:last-of-type {
+  width: 702px;
 }
 
 .filters-form fieldset label {
@@ -636,6 +684,10 @@ a {
         background: url("../img/checkbox-on.svg") no-repeat scroll 0 0;
 }
 
+.slider-range {
+  width: 217px;
+}
+
 .slider-range button {
   width: 20px;
   height: 22px;
@@ -667,8 +719,8 @@ a {
   color: #fff;
 }
 
-.inner-page .catalog-item:hover,
-.inner-page .catalog-item:focus {
+.catalog-item:hover,
+.catalog-item:focus {
   background-color: rgba(155,175,163, 0.5);
   box-shadow: -1px 1px 5px 0 #7f978a;
 }
