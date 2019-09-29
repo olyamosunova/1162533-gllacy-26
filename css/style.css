@@ -22,6 +22,9 @@ a {
   text-decoration: none;
 }
 
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -159,10 +162,9 @@ a {
   background-color: #fff;
 }
 
-.container h1 {
+.inner-page .page-title {
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 27px;
+  margin-top: 8px;
   margin-left: 27px;
 
   font-size: 35px;
@@ -180,20 +182,18 @@ a {
   line-height: 34px;
 }
 
-.stocks-item:first-of-type {
+.stocks-item {
   width: 560px;
-  height: 229px;
+}
 
+.stocks-item.raspberry {
   background-image: url("../img/raspberries-bg.jpg");
   background-color: #d2103d;
   background-repeat: no-repeat;
   border-radius: 15px;
 }
 
-.stocks-item:last-of-type {
-  width: 560px;
-  height: 229px;
-
+.stocks-item.choco {
   background-image: url("../img/chocolate-bg.jpg");
   background-color: #7a574f;
   background-repeat: no-repeat;
@@ -202,7 +202,9 @@ a {
 
 .features {
   width: 1146px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 28px;
+  padding-left: 18px;
 
   color: #323232;
   background-color: #ebdec8;
@@ -212,29 +214,24 @@ a {
 
 .features p {
   margin: 0;
-  margin-left: 21px;
-  padding-top: 30px;
+  padding: 0;
 
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
 }
 
-.features h2 {
-  margin: 0;
-  padding: 0;
-}
-
 .features-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding-bottom: 25px;
+  padding: 0;
 }
 
 .features-list li {
   width: 482px;
-  margin-top: 20px;
+  margin: 0;
+  margin-top: 22px;
 
   background-position: left top;
   background-repeat: no-repeat;
@@ -267,7 +264,13 @@ a {
 
 .news {
   width: 560px;
-  min-height: 220px;
+  margin-right: 26px;
+  padding-top: 24px;
+  padding-left: 19px;
+  padding-bottom: 69px;
+  padding-right: 260px;
+
+
   background-color: #fff;
   background-image: url("../img/bg-strawberry.jpg");
   border-radius: 20px;
@@ -275,9 +278,7 @@ a {
 
 .news h2 {
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  padding-left: 20px;
+  padding: 0;
 
   color: #323232;
   font-size: 16px;
@@ -288,7 +289,8 @@ a {
 .news a {
   display: block;
   width: 281px;
-  padding-left: 20px;
+  margin-top: 12px;
+  padding: 0;
 
   color: #323232;
   font-size: 24px;
@@ -313,6 +315,10 @@ a {
 .subscription {
   width: 560px;
   min-height: 220px;
+  padding-top: 37px;
+  padding-right: 25px;
+  padding-bottom: 37px;
+  padding-left: 25px;
 
   color: #656464;
   font-size: 16px;
@@ -320,17 +326,18 @@ a {
   font-weight: 400;
 
   background-color: #f8f7f4;
-  background-image: url("../img//bg-mail.png");
+  background-image:
+    url("../img//bg-email.png"),
+    url("../img//bg-mail.png");
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 20px;
 }
 
 .subscription p {
   margin: 0;
-  padding-top: 37px;
-  padding-right: 27px;
-  padding-bottom: 38px;
-  padding-left: 27px;
-
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .contacts-info h2 {
@@ -412,6 +419,7 @@ a {
 }
 
 .footer-social li {
+  box-sizing: content-box;
   width: 32px;
   height: 32px;
   margin-right: 12px;
@@ -494,11 +502,13 @@ a {
 }
 
 .form-subscription input {
-  width: 341px;
-  margin-left: 27px;
+  width: 355px;
+  margin: 0;
   margin-right: 10px;
-  padding: 13px;
-  padding-right: auto;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 12px;
 
   color: #999999;
   font-size: 16px;
@@ -509,6 +519,10 @@ a {
   border-radius: 5px;
 }
 
+.slider-button {
+  margin: 0;
+  padding: 0;
+}
 
 .slider-button button {
   width: 21px;
@@ -542,23 +556,27 @@ a {
   line-height: 60px;
 }
 
-.slider-picture li:first-child {
+.slider-picture {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-item {
   width: 1045px;
-  height: 600px;
+  min-height: 600px;
+}
+
+.slider-item.сreme-brulee{
   background-image: url("../img/ice-cream-1.png");
   background-repeat: no-repeat;
 }
 
-.slider-picture li:nth-child(2) {
-  width: 1045px;
-  height: 600px;
+.slider-item.lemon-sorbet {
   background-image: url("../img/ice-cream-2.png");
   background-repeat: no-repeat;
 }
 
-.slider-picture li:last-child {
-  width: 1045px;
-  height: 600px;
+.slider-item.strawberry-sorbet {
   background-image: url("../img/ice-cream-3.png");
   background-repeat: no-repeat;
 }
@@ -596,7 +614,7 @@ a {
 }
 
 .breadcrumbs li {
-  margin-right: 7px;
+  margin-left: 5px;
 }
 
 .breadcrumbs a {
@@ -698,20 +716,45 @@ a {
   border: none;
 }
 
+.catalog {
+  margin-top: 30px;
+  margin-right: 27px;
+  margin-bottom: 90px;
+  margin-left: 27px;
+}
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.catalog-list li {
-  width: 267px;
-  margin-right: 27px;
-  margin-bottom: 35px;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
-.catalog-list li:nth-child(4n) {
+.catalog-item {
+  position: relative;
+  margin-top: 38px;
+}
+
+.catalog-list .catalog-item {
+  box-sizing: content-box;
+  width: 267px;
+  margin-right: 26px;
+
+}
+
+.catalog-item .fast-view {
+  display: none;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.catalog-list .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -721,12 +764,33 @@ a {
 
 .catalog-item:hover,
 .catalog-item:focus {
+  /*
+  не могу понять как сделать
+  */
+  padding-top: 6px;
+  padding-right: 13px;
+  padding-left: 13px;
+
   background-color: rgba(155,175,163, 0.5);
   box-shadow: -1px 1px 5px 0 #7f978a;
 }
 
+.catalog-item:hover .fast-view {
+  display: block;
+}
+
+.catalog-item-image {
+  margin: 0;
+}
+
 .catalog-item-image img {
   border-radius: 50%;
+}
+
+.catalog-item-price {
+  position: absolute;
+  top: 215px;
+  margin: 0;
 }
 
 .catalog-item-price b {
@@ -749,6 +813,8 @@ a {
 .catalog-item h3 {
   margin: 0;
 
+  text-align: center;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -881,14 +947,7 @@ a {
 
 .index-columns {
   display: flex;
-  margin-top: 40px;
-  margin-right: 27px;
-  margin-bottom: 40px;
-  margin-left: 27px;
-}
-
-.index-columns .news {
-  margin-right: 27px;
+  margin: 39px 0;
 }
 
 .inner-page .main-footer .container {
