@@ -764,8 +764,9 @@ html { box-sizing: border-box; }
 
 .catalog-item:hover,
 .catalog-item:focus {
+
   /*
-  не могу понять как сделать
+  не могу понять как сделать так, чтобы карточка товара при наведении наезжала на другие карточки
   */
   padding-top: 6px;
   padding-right: 13px;
