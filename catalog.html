@@ -103,42 +103,48 @@
       <h2 class="visually-hidden">Фильтр</h2>
 
       <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-        <p>
-          <label for="sort">Сортировка:</label>
+
+        <div class="filter-sort">
           <p>
-            <select id="sort" class="sort" name="sort">
-              <option value="populary" selected>по популярности</option>
-              <option value="inexpensive">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="flat">по жирности</option>
-            </select>
+            <label for="sort">Сортировка:</label>
+            <p>
+              <select id="sort" class="sort" name="sort">
+                <option value="populary" selected>по популярности</option>
+                <option value="inexpensive">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="flat">по жирности</option>
+              </select>
+            </p>
           </p>
-        </p>
-
-        <p>
-          Цена:
-          <label for="price-for">
-            <span class="visually-hidden">Цена от</span>
-            <input id="price-for" name="price-for" type="number" value="100">
-            руб. -
-          </label>
-          <label for="price-to">
-            <span class="visually-hidden">Цена до</span>
-            <input id="price-to" name="price-to" type="number" value="500">
-            руб.
-          </label>
-        </p>
-
-        <!-- Нашла такую конструкцию в интернете
-            https://jqueryui.com/slider/#range -->
-
-        <div class="slider-range">
-          <div class=""></div>
-          <button type="button" name="price-from"><span class="visually-hidden">Цена от</span></button>
-          <button type="button" name="price-to"><span class="visually-hidden">Цена до</span></button>
         </div>
 
-        <fieldset class="filter-option">
+        <div class="filter-price">
+          <p>
+            Цена:
+            <label for="price-for">
+              <span class="visually-hidden">Цена от</span>
+              <input id="price-for" name="price-for" type="number" value="100">
+              руб. -
+            </label>
+            <label for="price-to">
+              <span class="visually-hidden">Цена до</span>
+              <input id="price-to" name="price-to" type="number" value="500">
+              руб.
+            </label>
+          </p>
+
+          <!-- Нашла такую конструкцию в интернете
+              https://jqueryui.com/slider/#range -->
+
+          <div class="slider-range">
+            <div class=""></div>
+            <button type="button" name="price-from"><span class="visually-hidden">Цена от</span></button>
+            <button type="button" name="price-to"><span class="visually-hidden">Цена до</span></button>
+          </div>
+        </div>
+
+
+        <fieldset class="filter-option fat">
           <legend>Жирность:</legend>
           <input id="r-1" class="filter-input-radio" type="radio" name="fat" value="0">
           <label for="r-1" class="label-radio">0%</label>
@@ -153,7 +159,7 @@
           <label for="r-4">выше 30%</label>
         </fieldset>
 
-        <fieldset class="filter-option">
+        <fieldset class="filter-option topping">
           <legend>Наполнители:</legend>
           <input id="ch-1" class="filter-input-checkbox" type="checkbox" name="choco" value="choco" checked>
           <label for="ch-1">шоколадные</label>
@@ -177,17 +183,21 @@
         <h2 class="visually-hidden">Виды мороженого</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img class="catalog-item-image" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
-            </p>
-            <p class="catalog-item-price">
-              <b>310&#8381;<span>/кг</span></b>
-            </p>
-            <a href="">
-              <h3>Сливочное с апельсиновым джемом
-                  и цитрусовой стружкой</h3>
-            </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="catalog-item-1">
+              <p class="catalog-item-image">
+                <img class="catalog-item-image" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
+              </p>
+              <p class="catalog-item-price">
+                <b>310&#8381;<span>/кг</span></b>
+              </p>
+              <a href="">
+                <h3>Сливочное с апельсиновым джемом
+                    и цитрусовой стружкой</h3>
+              </a>
+            </div>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -201,7 +211,9 @@
               <h3>Сливочно-кофейное с кусочками
                   шоколада</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -215,7 +227,9 @@
               <h3>Сливочно-клубничное с присыпкой
                   из белого шоколада</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -229,7 +243,9 @@
               <h3>Сливочное крем-брюле с
                   карамельной подливкой</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -242,7 +258,9 @@
             <a href="">
               <h3>Сливочное с брусничным джемом</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -256,7 +274,9 @@
               <h3>Сливочно-черничное с цельными
                   ягодами черники</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -270,7 +290,9 @@
               <h3>Сливочно-лимонное с карамельной
                   присыпкой</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -283,7 +305,9 @@
             <a href="">
               <h3>Сливочное с шоколадной стружкой</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -297,7 +321,9 @@
               <h3>Сливочно-ванильное с кусочками
                   шоколада</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -310,7 +336,9 @@
             <a href="">
               <h3>Сливочноe с ментоловым сиропом</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -324,7 +352,9 @@
               <h3>Сливочное с кусочками черного
                   шоколада</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
 
           <li class="catalog-item">
@@ -337,19 +367,21 @@
             <a href="">
               <h3>Сливочное с мятным сиропом</h3>
             </a>
-            <button class="button fast-view" type="button">Быстрый просмотр</button>
+            <div class="view">
+                <button class="button fast-view" type="button">Быстрый просмотр</button>
+            </div>
           </li>
         </ul>
       </section>
 
       <ul class="pagination-list">
-        <li class="pagination-item"><a href=""><span class="visually-hidden">Назад</span></a></li>
+        <li class="pagination-item prev"><a href=""><span class="visually-hidden">Назад</span></a></li>
         <li class="pagination-item pagination-item-current"><span>1</span></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
-        <li class="pagination-item"><a href="#"><span class="visually-hidden">Дальше</span></a></li>
+        <li class="pagination-item next"><a href="#"><span class="visually-hidden">Дальше</span></a></li>
       </ul>
     </main>
 
