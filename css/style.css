@@ -9,6 +9,7 @@ body {
   color: #ffffff;
 
   background-color: #849d8f;
+  /*background: url("../img/gllacy-index.jpg") no-repeat center top;*/
 }
 
 img {
@@ -16,9 +17,7 @@ img {
   height: auto;
 }
 
-.user-navigation div,
-.feedback,
-.main-catalog,
+
 .basket-form {
   display: none;
 }
@@ -219,7 +218,7 @@ html { box-sizing: border-box; }
   width: 560px;
   margin: 0;
   margin-right: 26px;
-  z-index: 100;
+  z-index: 1;
   padding-right: 27px;
   padding-bottom: 20px;
   padding-left: 18px;
@@ -1180,3 +1179,276 @@ html { box-sizing: border-box; }
   padding-top: 18px;
   border-top: 1px solid #a9bbb1;
 }
+
+/*-------------- Выпадающее меню --------------*/
+.modul-catalog:hover .main-catalog {
+  display: block;
+}
+
+.modul-catalog {
+  position: relative;
+}
+
+.modul-catalog .main-catalog {
+  display: none;
+
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  left: -21px;
+  width: 143px;
+  height: 172px;
+  z-index: 2;
+  list-style: none;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+
+}
+
+.main-catalog li {
+  margin: 0;
+}
+
+.main-catalog li:first-of-type a {
+  font-weight: 700;
+}
+
+.main-catalog li:first-of-type a {
+  padding-left: 12px;
+  margin-left: 7px;
+  margin-right: 9px;
+
+  border-bottom: 1px solid #d1d0ce;
+}
+
+.main-catalog a {
+  display: block;
+
+  padding: 8px 19px;
+  color: #000;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  border: none;
+}
+
+.main-catalog li:not(:first-of-type) a:hover,
+.main-catalog li:not(:first-of-type) a:focus  {
+  background-color: #fbded8;
+}
+
+/*-------------------------------------------------*/
+
+/* Выпадашка на поиск */
+
+.user-search:hover .field-search {
+  display: block;
+}
+
+.user-navigation .user-search {
+  position: relative;
+}
+
+.user-search .field-search {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  width: 342px;
+  height: 85px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+.field-search .form-search {
+  margin-top: 20px;
+  margin-left: 17px;
+}
+
+.form-search input {
+  width: 311px;
+  height: 44px;
+  padding: 14px;
+
+  color: #d3d3d2;
+
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+/*-------------------------------------*/
+
+/* Выпадашка на вход */
+
+.user-authorization:hover .private-office {
+  display: block;
+}
+
+.user-navigation .user-authorization {
+  position: relative;
+}
+
+.user-authorization .private-office {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: -185px;
+  width: 278px;
+  height: 216px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+
+  z-index: 4;
+}
+
+.private-office .login-form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.login-form p {
+  margin: 0
+}
+
+.login-form * {
+  margin-top: 21px;
+}
+
+.login-form input {
+  width: 240px;
+  height: 44px;
+  padding: 13px;
+  color: #d3d3d2;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.login-form a {
+  display: block;
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: #323232;
+  font-weight: 400;
+
+  border-bottom: 1px solid #adacaa;
+}
+
+.login-form .button {
+  align-self: flex-start;
+  margin: 0;
+  margin-top: -41px;
+  margin-left: 19px;
+
+  width: 100px;
+  height: 44px;
+
+  border-radius: 20px;
+}
+
+.login-form .help-link {
+  align-self: flex-end;
+  margin-top: 20px;
+  margin-right: 17px;
+
+}
+
+/*-------------------*/
+
+/* Попап обратная связь */
+
+.feedback {
+  display: none;
+
+  position: fixed;
+  top: 338px;
+  left: 50%;
+  margin-left: -249px;
+  padding-top: 20px;
+  padding-left: 24px;
+  width: 478px;
+  height: 442px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  z-index: 4;
+}
+
+.feedback p {
+  margin: 0;
+}
+
+.feedback .feedback-title {
+  padding-bottom: 20px;
+  color: #000;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.feedback .modal-feedback {
+  margin-right: 25px;
+}
+
+.feedback .modal-feedback *:not(p):not(.button) {
+  padding: 11px 15px;
+
+  color: #d3d3d2;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.feedback .modal-feedback input {
+  min-width: 267px;
+}
+
+.feedback .modal-feedback textarea {
+  width: 428px;
+  height: 155px;
+}
+
+.feedback .modal-feedback p {
+  margin-bottom: 20px;
+}
+
+.feedback .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.feedback .modal-close::after,
+.feedback .modal-close::before {
+  position: absolute;
+  top: 16px;
+  right: 17px;
+  content: "";
+  width: 2px;
+  height: 16px;
+  background-color: #000;
+
+  cursor: pointer;
+}
+
+.feedback .modal-close::after {
+  transform: rotate(45deg);
+}
+
+.feedback .modal-close::before {
+  transform: rotate(-45deg);
+}
+
+.modal-feedback .button {
+  float: right;
+}
+
+
+/*-------------------*/
