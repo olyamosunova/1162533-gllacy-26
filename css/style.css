@@ -30,12 +30,30 @@ a {
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
+/*
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+*/
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .inner-page {
@@ -82,7 +100,6 @@ html { box-sizing: border-box; }
 
 .site-navigation a {
   border-bottom: 1px solid #a6bcb0;
-
 }
 
 .user-navigation {
@@ -126,76 +143,55 @@ html { box-sizing: border-box; }
   text-decoration: none;
 }
 
+.user-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .search {
-  display: inline-block;
   width: 32px;
   height: 32px;
   padding: 7px;
-  background-image: url("../img/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 20px 20px;
+
   border-radius: 50%;
 }
 
 .login {
-  display: inline-block;
   width: 93px;
   height: 32px;
   padding: 5px 15px;
 
-  text-align: right;
-  line-height: 21px;
-
-  background-image: url("../img/entrance.svg");
-  background-repeat: no-repeat;
-  background-position: 20px center;
-  background-size: 20px 20px;
   border-radius: 30px;
 }
 
 .basket {
-  display: inline-block;
   width: 100px;
   height: 32px;
   padding: 5px 15px;
 
-  text-align: right;
-  line-height: 21px;
-
-  background-image: url("../img/basket.svg");
-  background-repeat: no-repeat;
-  background-position: 20px center;
-  background-size: 20px 20px;
   border-radius: 30px;
 }
 
 .inner-page .basket {
   min-width: 119px;
-  background-image: url("../img/basket-red.svg");
+  color: #000000;
+  background-color: #f7f6f3;
 }
 
-.search,
-.login,
-.basket {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.inner-page .search,
-.inner-page .login {
-  background-color: #b0c0b7;
-}
-
-.inner-page .basket {
+.user-button:hover,
+.user-button:focus {
   color: #000;
-  background-color: #fff;
+  background-color: #f8f7f5;
 }
 
-.search:hover,
-.login:hover,
-.basket:hover {
-  color: #000;
-  background-color: #fff;
+.user-button:not(.basket-red):hover path,
+.user-button:not(.basket-red):focus path,
+.user-button:not(.basket-red):hover g,
+.user-button:not(.basket-red):focus g {
+  fill: #000000;
 }
 
 .inner-page .page-title {
@@ -480,6 +476,7 @@ html { box-sizing: border-box; }
 
 .main-footer .container {
   display: flex;
+  align-items: flex-end;
 }
 
 .main-footer a {
@@ -512,38 +509,40 @@ html { box-sizing: border-box; }
 
 .footer-social {
   display: flex;
+  justify-content: space-between;
   margin: 0;
   margin-left: 27px;
   padding: 0;
+  width: 186px;
 }
 
-.footer-social li {
+.social-button {
+  display: flex;
   box-sizing: content-box;
   width: 32px;
   height: 32px;
-  margin-right: 12px;
-  background-repeat: no-repeat;
+
   border-radius: 50%;
-  border: 2px solid #dae2de;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.footer-social li:first-child {
-  background-image: url("../img/twitter.svg");
+.social-button:hover path,
+.social-button:focus path {
+  fill: #fff;
 }
 
-.footer-social li:nth-child(2){
-  background-image: url("../img/instagram.svg");
+.social-button:active path {
+  fill: #e9e9e9;
 }
 
-.footer-social li:nth-child(3){
-  background-image: url("../img/fb.svg");
-}
-
-.footer-social li:nth-child(4){
-  background-image: url("../img/vk.svg");
+.social-button:hover,
+.social-button:focus,
+ .social-button:active {
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-information {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -551,6 +550,19 @@ html { box-sizing: border-box; }
   height: 36px;
   margin: 0 auto;
   padding: 0;
+}
+
+.footer-information li:first-child a::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 13px;
+  top: 3px;
+  left: -23px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .footer-information li {
@@ -741,7 +753,29 @@ html { box-sizing: border-box; }
 }
 
 .breadcrumbs li {
+  position: relative;
   margin-left: 5px;
+  margin-right: 15px;
+}
+
+.breadcrumbs li:not(:last-of-type)::after,
+.breadcrumbs li:not(:first-of-type)::before {
+  position: absolute;
+  top: 6px;
+  content: "";
+  width: 7px;
+  height: 7px;
+
+  box-shadow: 1px 1px 0 0px white;
+  transform:rotate(-45deg) scale(0.4);
+}
+
+.breadcrumbs li:not(:last-of-type)::after {
+  right: -11px;
+}
+
+.breadcrumbs li:not(:first-of-type)::before {
+  left: -14px;
 }
 
 .breadcrumbs a {
@@ -909,6 +943,17 @@ html { box-sizing: border-box; }
   margin-top: 30px;
 }
 
+.catalog-item .icon-hit {
+  position: absolute;
+  display: block;
+  width: 61px;
+  height: 61px;
+
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .catalog-list .catalog-item {
   box-sizing: content-box;
   width: 267px;
@@ -1032,22 +1077,10 @@ html { box-sizing: border-box; }
   border-radius: 50%;
 }
 
-/*
-не могу понять, как перевернуть фоновую картинку на 180градусов
-и задать другой цвет svg картинке
-*/
-.pagination-item.prev {
-  background-image: url("../img/icon-right-small.svg");
+.pagination-item.prev svg {
   transform: rotate(180deg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.pagination-item.next {
-  background-image: url("../img/icon-right-small.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 .button-apply {
   padding: 7px 28px;
@@ -1108,6 +1141,7 @@ html { box-sizing: border-box; }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
   margin-bottom: 0;
   margin-left: 24px;
@@ -1120,6 +1154,7 @@ html { box-sizing: border-box; }
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 27px;
   margin-top: 23px;
   margin-bottom: 0;
