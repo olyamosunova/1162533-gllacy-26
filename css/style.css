@@ -425,6 +425,8 @@ html { box-sizing: border-box; }
 
 .contacts-info {
   position: relative;
+  min-width: 1200px;
+
 }
 
 .contacts-info iframe {
@@ -433,7 +435,7 @@ html { box-sizing: border-box; }
 
 .company-address {
   position: absolute;
-  right: 27px;
+  right: calc((100vw - 1200px) / 2 + 27px);
   top: 63px;
   width: 302px;
   height: 305px;
@@ -485,18 +487,15 @@ html { box-sizing: border-box; }
 }
 
 .main-footer  {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 15px;
+  padding-bottom: 29px;
 
   color: #fff;
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
-}
-
-.main-footer .container {
-  display: flex;
-  align-items: flex-end;
 }
 
 .main-footer a {
@@ -509,9 +508,6 @@ html { box-sizing: border-box; }
 .footer-copyright a:last-child:hover,
 .footer-copyright a:last-child:focus,
 .footer-copyright a:last-child:active,
-.catalog-item a:hover,
-.catalog-item a:focus,
-.catalog-item a:active,
 .contacts a:hover,
 .contacts a:focus,
 .contacts a:active,
@@ -520,6 +516,13 @@ html { box-sizing: border-box; }
 .breadcrumbs a:active {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.304);
+  text-decoration-color: rgba(255, 188, 158, 0.304);
+}
+
+.catalog-item a:hover,
+.catalog-item a:focus,
+.catalog-item a:active {
+  color: #ffbc9e;
   text-decoration-color: rgba(255, 188, 158, 0.304);
 }
 
@@ -633,7 +636,6 @@ html { box-sizing: border-box; }
   border-radius: 5px;
 }
 
-
 .slider {
   display: flex;
   align-items: center;
@@ -716,7 +718,7 @@ html { box-sizing: border-box; }
 .slider-item.сreme-brulee {
   background-image:
     url("../img/ice-cream-1.png"),
-    radial-gradient(#c9efda, #adcebc, #96b2a2, #869f91, #859e90, #849d8f);
+    radial-gradient(#c9efda, #adcebc, #96b2a2, #869f91, #859e90, #849d8f 70%);
   background-repeat: no-repeat;
 }
 
@@ -724,7 +726,7 @@ html { box-sizing: border-box; }
 
   background-image:
     url("../img/ice-cream-2.png"),
-    radial-gradient(#cde1f2, #b2c3d4, #a0b0c0, #9fafbf, #919faf, #8996a6);
+    radial-gradient(#cde1f2, #b2c3d4, #a0b0c0, #9fafbf, #919faf, #8996a6 70%);
   background-repeat: no-repeat;
 }
 
@@ -732,7 +734,7 @@ html { box-sizing: border-box; }
 
   background-image:
     url("../img/ice-cream-3.png"),
-    radial-gradient(#f0dbd2, #ccb9b1, #bfaba3, #c0ada5, #a7948d, #9d8b84);
+    radial-gradient(#f0dbd2, #ccb9b1, #bfaba3, #c0ada5, #a7948d, #9d8b84 70%);
   background-repeat: no-repeat;
 }
 
@@ -983,8 +985,9 @@ html { box-sizing: border-box; }
   position: absolute;
   top: -6px;
   left: -13px;
-  width: 293px;
-  height: 405px;
+  right: -13px;
+  bottom: -75px;
+
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 10px;
   box-shadow:
@@ -1007,6 +1010,18 @@ html { box-sizing: border-box; }
   z-index: 6;
 }
 
+.catalog-list>.catalog-item:hover .catalog-item-image {
+  z-index: 7;
+}
+
+.catalog-list>.catalog-item:hover .catalog-item-price {
+  z-index: 8;
+}
+
+.catalog-list>.catalog-item:hover a {
+  z-index: 9;
+}
+
 .catalog-list .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
@@ -1016,10 +1031,12 @@ html { box-sizing: border-box; }
  */
 
 .catalog a {
+  display: inline-block;
   color: #fff;
 }
 
 .catalog-item-image {
+  position: relative;
   margin: 0;
 }
 
@@ -1044,6 +1061,8 @@ html { box-sizing: border-box; }
 }
 
 .catalog-item a {
+  position: relative;
+
   font-size: 16px;
   line-height: 33px;
   text-decoration: underline;
@@ -1051,11 +1070,13 @@ html { box-sizing: border-box; }
 }
 
 .catalog-item h3 {
+  position: relative;
   margin: 0;
 
   text-align: center;
   font-size: 16px;
   font-weight: 400;
+  line-height: 22px;
 }
 
 .pagination-list {
@@ -1065,33 +1086,43 @@ html { box-sizing: border-box; }
   margin: 0;
   margin-top: 90px;
   margin-right: 27px;
+  margin-bottom: 30px;
   margin-left: auto;
   padding: 0;
 }
 
 .pagination-list li {
   min-width: 27px;
+  margin-right: 4px;
 
 }
 
 .pagination-list a {
   color: #fff;
   font-weight: 500;
-  padding: 8px 10px;
+  padding: 6px 10px;
+
+  border-radius: 50%;
 }
 
 .pagination-list li:not(.prev):not(.next) a:hover,
 .pagination-list li:not(.prev):not(.next) a:focus {
   color: #fff;
+
   background-color: rgba(255,255,255,0.2);
-  border-radius: 50%;
 }
 
-.pagination-item-current span,
-.pagination-list a:active {
-  padding: 7px 10px;
+.pagination-list li:not(.prev):not(.next) a:active {
+  color: #000;
+
+  background-color: #fff;
+}
+
+.pagination-item-current span {
+  padding: 6px 10px;
 
   color: #000;
+  font-weight: 500;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -1099,7 +1130,6 @@ html { box-sizing: border-box; }
 .pagination-item.prev svg {
   transform: rotate(180deg);
 }
-
 
 .button-apply {
   padding: 7px 28px;
@@ -1195,13 +1225,13 @@ html { box-sizing: border-box; }
   margin: 39px 27px;
 }
 
-.inner-page .main-footer .container {
-  padding-top: 18px;
+.inner-page .main-footer {
   border-top: 1px solid #a9bbb1;
 }
 
 /*-------------- Выпадающее меню --------------*/
-.modul-catalog:hover .main-catalog {
+.modul-catalog a:hover + .main-catalog,
+.modul-catalog a:focus + .main-catalog {
   display: block;
 }
 
@@ -1227,6 +1257,20 @@ html { box-sizing: border-box; }
     -5px 14px 20px 1px rgba(79,94,86,0.5),
      5px 14px 20px 0px rgba(79,94,86,0.5);
 }
+
+/*
+.main-catalog::after {
+  position: absolute;
+  top: -13px;
+  left: 0;
+
+  content: "";
+
+  width: 143px;
+  height: 15px;
+  background-color: red;
+}
+*/
 
 .main-catalog li {
   margin: 0;
@@ -1275,7 +1319,8 @@ html { box-sizing: border-box; }
 
 /* Выпадашка на поиск */
 
-.user-search:hover .field-search {
+.user-search a:hover + .field-search,
+.user-search a:focus + .field-search {
   display: block;
 }
 
@@ -1320,7 +1365,8 @@ html { box-sizing: border-box; }
 
 /* Выпадашка на вход */
 
-.user-authorization:hover .private-office {
+.user-authorization a:hover + .private-office,
+.user-authorization a:focus + .private-office {
   display: block;
 }
 
@@ -1403,7 +1449,8 @@ html { box-sizing: border-box; }
 
 /* Выпадашка корзина */
 
-.inner-page .user-basket:hover .basket-form {
+.inner-page .user-basket a:hover + .basket-form,
+.inner-page .user-basket a:focus + .basket-form {
   display: block;
 }
 
