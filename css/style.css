@@ -150,36 +150,36 @@ html { box-sizing: border-box; }
   cursor: pointer;
 }
 
-#product-1:checked ~ .site-wrapper {
+input[id="product-1"]:checked ~ .site-wrapper {
   background-color: #849d8f;
   background-image:
     url("../img/ice-cream-1.png"),
     url("../img/bg1-light.png");
 }
 
-#product-2:checked ~ .site-wrapper {
+input[id="product-2"]:checked ~ .site-wrapper {
   background-color: #8996a6;
   background-image:
     url("../img/ice-cream-2.png"),
     url("../img/bg2-light.png");
 }
 
-#product-3:checked ~ .site-wrapper {
+input[id="product-3"]:checked ~ .site-wrapper {
   background-color: #9d8b84;
   background-image:
     url("../img/ice-cream-3.png"),
     url("../img/bg3-light.png");
 }
 
-#product-1:checked ~ .site-wrapper #slide1,
-#product-2:checked ~ .site-wrapper #slide2,
-#product-3:checked ~ .site-wrapper #slide3 {
+input[id="product-1"]:checked ~ .site-wrapper .slider-item[id="slide1"],
+input[id="product-2"]:checked ~ .site-wrapper .slider-item[id="slide2"],
+input[id="product-3"]:checked ~ .site-wrapper .slider-item[id="slide3"] {
   display: block;
 }
 
-#product-1:checked ~ .site-wrapper label[for="product-1"],
-#product-2:checked ~ .site-wrapper label[for="product-2"],
-#product-3:checked ~ .site-wrapper label[for="product-3"] {
+input[id="product-1"]:checked ~ .site-wrapper label[for="product-1"],
+input[id="product-2"]:checked ~ .site-wrapper label[for="product-2"],
+input[id="product-3"]:checked ~ .site-wrapper label[for="product-3"] {
   background-color: #ffffff;
 }
 
@@ -1828,7 +1828,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 442px;
   background-color: #f8f7f4;
   border-radius: 10px;
-  z-index: 4;
+  z-index: 100;
 }
 
 .feedback .button {
@@ -1849,11 +1849,11 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 500;
 }
 
-.feedback .modal-feedback {
+.modal-feedback {
   margin-right: 25px;
 }
 
-.feedback .modal-feedback *:not(p):not(.button) {
+.modal-feedback *:not(p):not(.button) {
   padding: 11px 15px;
 
   color: #d3d3d2;
@@ -1861,9 +1861,51 @@ input[type=number]::-webkit-inner-spin-button {
   border-radius: 5px;
 }
 
-.feedback .modal-feedback input {
+.modal-feedback input {
   min-width: 267px;
   cursor: pointer;
+}
+
+.modal-feedback input::-webkit-input-placeholder,
+.modal-feedback textarea::-webkit-input-placeholder {
+ font-weight: 400;
+}
+.modal-feedback input::-moz-placeholder,
+.modal-feedback textarea::-moz-placeholder {
+ font-weight: 400;
+}
+
+.modal-feedback input:hover,
+.modal-feedback textarea:hover {
+  border: 2px solid #c7c6c5;
+}
+
+.modal-feedback input:focus,
+.modal-feedback textarea:focus {
+  color: #000000;
+  border: none;
+}
+
+.modal-feedback input:valid,
+.modal-feedback textarea:valid {
+  color: #000000;
+  font-weight: 700;
+  background-color: none;
+}
+
+.modal-show {
+  display: block;
+}
+
+@keyframes shake {
+0%, 100% { transform: translateX(0); }
+10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 /*
