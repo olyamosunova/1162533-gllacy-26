@@ -22,13 +22,22 @@ a {
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
   height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .site-wrapper {
@@ -151,6 +160,13 @@ html { box-sizing: border-box; }
   border-radius: 50%;
   cursor: pointer;
 }
+
+input[id="product-1"]:focus ~ .site-wrapper label[for="product-1"],
+input[id="product-2"]:focus ~ .site-wrapper label[for="product-2"],
+input[id="product-3"]:focus ~ .site-wrapper label[for="product-3"] {
+  border: 2px solid blue;
+}
+
 
 input[id="product-1"]:checked ~ .site-wrapper {
   background-color: #849d8f;
@@ -955,6 +971,15 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+-moz-appearance: number-input;
+}
+
 .slider-range {
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 30px;
@@ -1008,10 +1033,6 @@ input[type=number]::-webkit-inner-spin-button {
   fill: #000000;
 }
 
-.filter-input-radio {
-  display: none;
-}
-
 .filter-input-radio + label {
   position: relative;
   padding: 1px;
@@ -1053,13 +1074,13 @@ input[type=number]::-webkit-inner-spin-button {
   opacity: 0.8;
 }
 
-.filter-input-radio + label:hover::before,
-.filter-input-radio + label:focus::before  {
+.filter-input-radio:focus + label::before {
   opacity: 1;
 }
 
-.filter-input-checkbox {
-  display: none;
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:focus::before {
+  opacity: 1;
 }
 
 .filter-input-checkbox + label {
@@ -1101,6 +1122,11 @@ input[type=number]::-webkit-inner-spin-button {
   background-image: url("../img/checkbox-on.svg");
   background-size: 24px 20px;
   opacity: 0.8;
+}
+
+
+.filter-input-checkbox:focus + label::before  {
+  opacity: 1;
 }
 
 .filter-input-checkbox + label:hover::before,
@@ -2075,6 +2101,4 @@ input[type=number]::-webkit-inner-spin-button {
 .modal-feedback .button {
   float: right;
 }
-
-
 /*-------------------*/
